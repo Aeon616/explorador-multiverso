@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/nunito';
+
+/* Tokens de diseno: Tailwind los convierte en utilidades (bg-ink, font-display...) */
+@theme {
+  --color-coat: #e3f2f4;
+  --color-ink: #14213d;
+  --color-muted: #44506b;
+  --color-space: #241a5c;
+  --color-portal: #97ce4c;
+  --color-morty: #f5dc3c;
+  --color-danger: #c81e3a;
+
+  --font-display: 'Bricolage Grotesque Variable', sans-serif;
+  --font-sans: 'Nunito Variable', sans-serif;
+
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+
+  --animate-portal: portal-spin 14s linear infinite;
+  --animate-toast: toast-in 200ms ease-out;
+
+  @keyframes portal-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}
